@@ -262,7 +262,7 @@ function confirmReceived()
 
 ## Injected Web
 ![](InjectedWeb/Deploy.gif)
-![](injectedWeb/2.DeploySuccesful.gif)
+![](InjectedWeb/DeployTrans.gif)
 ![alt text](injectedWeb/3.SuccessfulDeployLog.jpg)
 ![](injectedWeb/4.AfterDeployCreatorAddress.jpg)
 ![alt text](injectedWeb/5.RecieverAddresNCreatorName.gif)
