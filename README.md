@@ -12,6 +12,7 @@ There are multiple ways to solve this problem, but all fall short in one or the 
       
 ## Program
 
+```
 pragma solidity ^0.5.0;
 
 contract Purchase {
@@ -130,6 +131,7 @@ contract Purchase {
         seller.transfer(3 * value);
     }
 }
+```
 
 ## Implementation
 
@@ -140,6 +142,7 @@ This smart contract also lets both sides block the refund. The pattern you shoul
 
 As usual, we start with stating the version pragma and listing the details of our contract:
 
+```
 pragma solidity >=0.4.22 <0.7.0;
 
 contract Purchase {
@@ -148,12 +151,14 @@ contract Purchase {
     address payable public buyer;
     enum State { Created, Locked, Inactive }
     State public state;
+   ```
    
 Next, we will use function modifiers to validate input. We also create three possible events:
 Aborted(); will trigger if any party cancels the purchase.
 PurchaseConfirmed(); will trigger when the buyer confirms the purchase.
 ItemReceived(); will trigger when the buyer receives the item they bought.
 
+```
 constructor() public payable {
         seller = msg.sender;
         value = msg.value / 2;
@@ -192,9 +197,11 @@ constructor() public payable {
     event Aborted();
     event PurchaseConfirmed();
     event ItemReceived();
+```
     
 Before the contract locks, the seller can still abort the sale and reclaim their Ether:
 
+```
 function abort()
         public
         onlySeller
@@ -204,9 +211,9 @@ function abort()
         state = State.Inactive;
         seller.transfer(address(this).balance);
     }
-  
+ ``` 
 To confirm the sale, the buyer calls confirmPurchase(). Their transaction has to include double the value of the item in Ether (2 * value):
-
+```
 function confirmPurchase()
         public
         inState(State.Created)
@@ -217,9 +224,9 @@ function confirmPurchase()
         buyer = msg.sender;
         state = State.Locked;
     }
-
+```
 The contract will keep the Ether locked until the buyer calls confirmReceived(). By doing that and confirming the purchased item reached them, the buyer releases the Ether:
-
+```
 function confirmReceived()
         public
         onlyBuyer
@@ -231,7 +238,7 @@ function confirmReceived()
         seller.transfer(address(this).balance);
     }
 }
-
+```
 ### This program is executed in two environments.
 1. JVM
 2. Injected Web
