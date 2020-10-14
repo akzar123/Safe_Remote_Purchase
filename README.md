@@ -261,7 +261,7 @@ function confirmReceived()
 ![alt text](Jvm/13.ValueInSenderAcntAftrSent.jpg)
 
 ## Injected Web
-![](injectedWeb/1.SelectInjectedWeb.gif)
+![](InjectedWeb/Deploy.gif)
 ![](injectedWeb/2.DeploySuccesful.gif)
 ![alt text](injectedWeb/3.SuccessfulDeployLog.jpg)
 ![](injectedWeb/4.AfterDeployCreatorAddress.jpg)
