@@ -138,6 +138,8 @@ contract Purchase {
 You can use a smart contract as an agreement between a seller and a buyer when planning a remote purchase. In this section, we will show you how to do that using an Ethereum contract example.
 The main idea is that both seller and buyer send double the value of the item in Ether. When the buyer receives it, they get half of their Ether back. The other half is sent to the seller as payment. Therefore, the seller receives triple the value of their sale, as they also get their Ether refunded.
 
+![](Images/head 1.png)
+
 This smart contract also lets both sides block the refund. The pattern you should use for that is the same as withdrawing.
 
 As usual, we start with stating the version pragma and listing the details of our contract:
