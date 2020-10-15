@@ -246,12 +246,12 @@ function confirmReceived()
 2. Injected Web
 
 ## JVM
-![](Jvm/1.program.gif)
-![](Jvm/2.cmpilrLoading.gif)
-![alt text](Jvm/3.AftrrCompilerLoadRun.jpg)
-![](Jvm/4.SelectCreatorAcnt.gif)
-![alt text](Jvm/5.CreatorAccount.jpg)
-![alt text](Jvm/6.AfterDeploy.jpg)
+![](JVM/1.Program.gif)
+![](JVM/2.Compilerloading.gif)
+![](JVM/3.SenderChoosingValue.gif)
+![](JVM/4.Deploy.gif)
+![alt text](JVM/4.1.DetailsaftrDeploy.jpg)
+![](JVM/5.SenderSuccess.gif)
 ![](Jvm/7.SelectingReceiverAddress.gif)
 ![](Jvm/8.SelecValueNTransctToChoosenRecieverFromCreator.gif)
 ![](Jvm/9.BalnceInReciveAcnt,CreatorNam,CreatorAddress.gif)
